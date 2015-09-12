@@ -25,4 +25,4 @@ If you would like a given announcement to have a different timeout than your def
 
 ## Installing
 
-The easiest way to install this is with Carthage. Simply add `github spanage/AccessibilityAnnouncer` to your `Cartfile`.
+The easiest way to install this is with Carthage. Simply add `"github spanage/AccessibilityAnnouncer"` to your `Cartfile`.
