@@ -22,15 +22,20 @@ public class AccessibilityAnnouncer {
     
     private let producer: SignalProducer<AnnouncerProducer, NoError>
     private let sink: Event<AnnouncerProducer, NoError>.Sink
+    private let disposable: Disposable
     
     public init(defaultTimeout: NSTimeInterval = 3.0) {
         self.defaultRetryTimeout = defaultTimeout
         
         (producer, sink) = SignalProducer<AnnouncerProducer, NoError>.buffer()
         
-        producer
+        disposable = producer
             .flatten(.Concat)
             .start()
+    }
+    
+    deinit {
+        disposable.dispose()
     }
     
     public func announce(announcement: String) {
