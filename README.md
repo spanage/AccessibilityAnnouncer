@@ -34,4 +34,4 @@ announcer.announce("Hello!", withRetryTimeout: 0.0)
 
 ## Installing
 
-The easiest way to install this is with Carthage. Simply add `"github spanage/AccessibilityAnnouncer"` to your `Cartfile`.
+The easiest way to install this is with Carthage. Simply add `github "spanage/AccessibilityAnnouncer"` to your `Cartfile`.
