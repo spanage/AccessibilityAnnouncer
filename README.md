@@ -1,5 +1,7 @@
 # AccessibilityAnnouncer
 An accessibility announcement queue for iOS with timeout and retry behavior. Built using RAC.
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 
 ## The Idea
 
