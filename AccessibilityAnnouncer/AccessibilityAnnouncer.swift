@@ -23,7 +23,7 @@ public class AccessibilityAnnouncer {
     private let producer: SignalProducer<AnnouncerProducer, NoError>
     private let sink: Event<AnnouncerProducer, NoError>.Sink
     
-    public init(defaultTimeout: NSTimeInterval) {
+    public init(defaultTimeout: NSTimeInterval = 3.0) {
         self.defaultRetryTimeout = defaultTimeout
         
         (producer, sink) = SignalProducer<AnnouncerProducer, NoError>.buffer()
