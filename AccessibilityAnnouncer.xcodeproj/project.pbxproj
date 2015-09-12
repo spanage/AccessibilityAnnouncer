@@ -8,12 +8,62 @@
 
 /* Begin PBXBuildFile section */
 		870BEB661BA3BF84004643C9 /* AccessibilityAnnouncer.h in Headers */ = {isa = PBXBuildFile; fileRef = 870BEB651BA3BF84004643C9 /* AccessibilityAnnouncer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		870BEB741BA3C091004643C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BEB731BA3C091004643C9 /* AppDelegate.swift */; };
+		870BEB761BA3C091004643C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BEB751BA3C091004643C9 /* ViewController.swift */; };
+		870BEB791BA3C091004643C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870BEB771BA3C091004643C9 /* Main.storyboard */; };
+		870BEB7B1BA3C091004643C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 870BEB7A1BA3C091004643C9 /* Assets.xcassets */; };
+		870BEB7E1BA3C091004643C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870BEB7C1BA3C091004643C9 /* LaunchScreen.storyboard */; };
+		870BEB831BA3C0B3004643C9 /* AccessibilityAnnouncer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB621BA3BF84004643C9 /* AccessibilityAnnouncer.framework */; };
+		870BEB841BA3C0B3004643C9 /* AccessibilityAnnouncer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB621BA3BF84004643C9 /* AccessibilityAnnouncer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		870BEB891BA3C679004643C9 /* AccessibilityAnnouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BEB881BA3C679004643C9 /* AccessibilityAnnouncer.swift */; settings = {ASSET_TAGS = (); }; };
+		870BEB8C1BA3C802004643C9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8A1BA3C802004643C9 /* ReactiveCocoa.framework */; };
+		870BEB8D1BA3C802004643C9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8B1BA3C802004643C9 /* Result.framework */; };
+		870BEB8F1BA3CCAA004643C9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8A1BA3C802004643C9 /* ReactiveCocoa.framework */; };
+		870BEB901BA3CCAA004643C9 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8A1BA3C802004643C9 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		870BEB911BA3CCAA004643C9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8B1BA3C802004643C9 /* Result.framework */; };
+		870BEB921BA3CCAA004643C9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8B1BA3C802004643C9 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		870BEB851BA3C0B3004643C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 870BEB591BA3BF84004643C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 870BEB611BA3BF84004643C9;
+			remoteInfo = AccessibilityAnnouncer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		870BEB871BA3C0B3004643C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				870BEB921BA3CCAA004643C9 /* Result.framework in Embed Frameworks */,
+				870BEB841BA3C0B3004643C9 /* AccessibilityAnnouncer.framework in Embed Frameworks */,
+				870BEB901BA3CCAA004643C9 /* ReactiveCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		870BEB621BA3BF84004643C9 /* AccessibilityAnnouncer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccessibilityAnnouncer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		870BEB651BA3BF84004643C9 /* AccessibilityAnnouncer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccessibilityAnnouncer.h; sourceTree = "<group>"; };
 		870BEB671BA3BF84004643C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		870BEB711BA3C091004643C9 /* AnnouncerDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnnouncerDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		870BEB731BA3C091004643C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		870BEB751BA3C091004643C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		870BEB781BA3C091004643C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		870BEB7A1BA3C091004643C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		870BEB7D1BA3C091004643C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		870BEB7F1BA3C091004643C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		870BEB881BA3C679004643C9 /* AccessibilityAnnouncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityAnnouncer.swift; sourceTree = "<group>"; };
+		870BEB8A1BA3C802004643C9 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		870BEB8B1BA3C802004643C9 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +71,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870BEB8C1BA3C802004643C9 /* ReactiveCocoa.framework in Frameworks */,
+				870BEB8D1BA3C802004643C9 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		870BEB6E1BA3C091004643C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				870BEB911BA3CCAA004643C9 /* Result.framework in Frameworks */,
+				870BEB831BA3C0B3004643C9 /* AccessibilityAnnouncer.framework in Frameworks */,
+				870BEB8F1BA3CCAA004643C9 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,7 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				870BEB641BA3BF84004643C9 /* AccessibilityAnnouncer */,
+				870BEB721BA3C091004643C9 /* AnnouncerDemoApp */,
 				870BEB631BA3BF84004643C9 /* Products */,
+				870BEB8E1BA3C819004643C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -39,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				870BEB621BA3BF84004643C9 /* AccessibilityAnnouncer.framework */,
+				870BEB711BA3C091004643C9 /* AnnouncerDemoApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -47,9 +112,32 @@
 			isa = PBXGroup;
 			children = (
 				870BEB651BA3BF84004643C9 /* AccessibilityAnnouncer.h */,
+				870BEB881BA3C679004643C9 /* AccessibilityAnnouncer.swift */,
 				870BEB671BA3BF84004643C9 /* Info.plist */,
 			);
 			path = AccessibilityAnnouncer;
+			sourceTree = "<group>";
+		};
+		870BEB721BA3C091004643C9 /* AnnouncerDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				870BEB731BA3C091004643C9 /* AppDelegate.swift */,
+				870BEB751BA3C091004643C9 /* ViewController.swift */,
+				870BEB771BA3C091004643C9 /* Main.storyboard */,
+				870BEB7A1BA3C091004643C9 /* Assets.xcassets */,
+				870BEB7C1BA3C091004643C9 /* LaunchScreen.storyboard */,
+				870BEB7F1BA3C091004643C9 /* Info.plist */,
+			);
+			path = AnnouncerDemoApp;
+			sourceTree = "<group>";
+		};
+		870BEB8E1BA3C819004643C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				870BEB8A1BA3C802004643C9 /* ReactiveCocoa.framework */,
+				870BEB8B1BA3C802004643C9 /* Result.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +172,39 @@
 			productReference = 870BEB621BA3BF84004643C9 /* AccessibilityAnnouncer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		870BEB701BA3C091004643C9 /* AnnouncerDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 870BEB801BA3C091004643C9 /* Build configuration list for PBXNativeTarget "AnnouncerDemoApp" */;
+			buildPhases = (
+				870BEB6D1BA3C091004643C9 /* Sources */,
+				870BEB6E1BA3C091004643C9 /* Frameworks */,
+				870BEB6F1BA3C091004643C9 /* Resources */,
+				870BEB871BA3C0B3004643C9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				870BEB861BA3C0B3004643C9 /* PBXTargetDependency */,
+			);
+			name = AnnouncerDemoApp;
+			productName = AnnouncerDemoApp;
+			productReference = 870BEB711BA3C091004643C9 /* AnnouncerDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		870BEB591BA3BF84004643C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Sommer Panage";
 				TargetAttributes = {
 					870BEB611BA3BF84004643C9 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					870BEB701BA3C091004643C9 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 				};
@@ -104,6 +215,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 870BEB581BA3BF84004643C9;
 			productRefGroup = 870BEB631BA3BF84004643C9 /* Products */;
@@ -111,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				870BEB611BA3BF84004643C9 /* AccessibilityAnnouncer */,
+				870BEB701BA3C091004643C9 /* AnnouncerDemoApp */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +236,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		870BEB6F1BA3C091004643C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				870BEB7E1BA3C091004643C9 /* LaunchScreen.storyboard in Resources */,
+				870BEB7B1BA3C091004643C9 /* Assets.xcassets in Resources */,
+				870BEB791BA3C091004643C9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -130,10 +253,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870BEB891BA3C679004643C9 /* AccessibilityAnnouncer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		870BEB6D1BA3C091004643C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				870BEB761BA3C091004643C9 /* ViewController.swift in Sources */,
+				870BEB741BA3C091004643C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		870BEB861BA3C0B3004643C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 870BEB611BA3BF84004643C9 /* AccessibilityAnnouncer */;
+			targetProxy = 870BEB851BA3C0B3004643C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		870BEB771BA3C091004643C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				870BEB781BA3C091004643C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		870BEB7C1BA3C091004643C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				870BEB7D1BA3C091004643C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		870BEB681BA3BF84004643C9 /* Debug */ = {
@@ -173,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -215,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -228,10 +388,37 @@
 		870BEB6B1BA3BF84004643C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = AccessibilityAnnouncer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sommerpanage.AccessibilityAnnouncer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		870BEB6C1BA3BF84004643C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AccessibilityAnnouncer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -239,21 +426,39 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		870BEB6C1BA3BF84004643C9 /* Release */ = {
+		870BEB811BA3C091004643C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AccessibilityAnnouncer/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sommerpanage.AccessibilityAnnouncer;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = AnnouncerDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sommerpanage.AnnouncerDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		870BEB821BA3C091004643C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = AnnouncerDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sommerpanage.AnnouncerDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -274,6 +479,14 @@
 			buildConfigurations = (
 				870BEB6B1BA3BF84004643C9 /* Debug */,
 				870BEB6C1BA3BF84004643C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		870BEB801BA3C091004643C9 /* Build configuration list for PBXNativeTarget "AnnouncerDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				870BEB811BA3C091004643C9 /* Debug */,
+				870BEB821BA3C091004643C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
