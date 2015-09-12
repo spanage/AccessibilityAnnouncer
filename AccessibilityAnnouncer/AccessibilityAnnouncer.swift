@@ -11,13 +11,21 @@ import ReactiveCocoa
 
 public class AccessibilityAnnouncer {
     
+    // Amount of time for which our announcer should retry a failing announcement before
+    // giving up. We recommend no more than 3 seconds for this, otherwise the annoucnement
+    // will be out of context. If 0 is set in the initializer, then there will be no retry
+    // behavior by default.
+    public let defaultRetryTimeout: NSTimeInterval
+    
     private typealias AnnouncerProducer = SignalProducer<(), NoError>
     private typealias NotifierProducer = SignalProducer<(), NotificationError>
     
     private let producer: SignalProducer<AnnouncerProducer, NoError>
     private let sink: Event<AnnouncerProducer, NoError>.Sink
     
-    public init() {
+    public init(defaultTimeout: NSTimeInterval) {
+        self.defaultRetryTimeout = defaultTimeout
+        
         (producer, sink) = SignalProducer<AnnouncerProducer, NoError>.buffer()
         
         producer
@@ -26,6 +34,11 @@ public class AccessibilityAnnouncer {
     }
     
     public func announce(announcement: String) {
+        announce(announcement, withRetryTimeout: defaultRetryTimeout)
+    }
+    
+    // Passing a timeout here overrides the default timeout for this announcement only.
+    public func announce(announcement: String, withRetryTimeout timeout: NSTimeInterval) {
         let announcer = createProducerForAnnouncer(announcement)
         let notifier = createProducerForNotifier(announcement)
         
@@ -36,7 +49,7 @@ public class AccessibilityAnnouncer {
         
         let retryTilTimeoutProducer = announceAndCheckNotificationProducer
             .retry(Int.max)
-            .timeoutWithError(.AnnouncementTimedOut, afterInterval: 5.0, onScheduler: QueueScheduler())
+            .timeoutWithError(.AnnouncementTimedOut, afterInterval: timeout, onScheduler: QueueScheduler())
             .on(error: { print("Error: \($0)") })
             .flatMapError { _ in AnnouncerProducer.empty }
         

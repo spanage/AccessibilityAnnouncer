@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk0-Fd-FSP">
-                                <rect key="frame" x="61.5" y="180" width="252" height="32"/>
+                                <rect key="frame" x="61" y="180" width="252" height="32"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="Short Accessibility Annoucement"/>
                                 <connections>
@@ -33,19 +34,54 @@
                                     <action selector="didTapLongAnnouncement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AsG-Mq-6vz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay in seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPu-tY-S6w">
+                                <rect key="frame" x="126" y="384" width="123" height="19.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5lP-wg-UuV">
+                                <rect key="frame" x="16" y="411" width="343" height="29"/>
+                                <segments>
+                                    <segment title="0"/>
+                                    <segment title="1"/>
+                                    <segment title="5"/>
+                                    <segment title="10"/>
+                                    <segment title="20"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a long bit of text that the user might be hearing when an annoucnement is triggered" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTI-FL-xKS">
+                                <rect key="frame" x="16" y="28" width="343" height="40.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.25256470959595956" green="0.25256470959595956" blue="0.25256470959595956" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yk0-Fd-FSP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5kI-Ve-Yv9"/>
                             <constraint firstItem="L2S-ww-d3t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A9v-SV-8vz"/>
+                            <constraint firstItem="5lP-wg-UuV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AAp-JR-S2k"/>
+                            <constraint firstItem="tTI-FL-xKS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="F9n-0G-yBW"/>
+                            <constraint firstItem="tTI-FL-xKS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Oa2-Vi-2RT"/>
+                            <constraint firstItem="5lP-wg-UuV" firstAttribute="top" secondItem="gPu-tY-S6w" secondAttribute="bottom" constant="8" id="Sjn-Kk-TXn"/>
                             <constraint firstItem="L2S-ww-d3t" firstAttribute="top" secondItem="yk0-Fd-FSP" secondAttribute="bottom" constant="60" id="XnW-v6-JEa"/>
+                            <constraint firstItem="5lP-wg-UuV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ycl-bA-3w0"/>
+                            <constraint firstItem="gPu-tY-S6w" firstAttribute="top" secondItem="L2S-ww-d3t" secondAttribute="bottom" constant="80" id="ZCH-7s-OoD"/>
                             <constraint firstItem="yk0-Fd-FSP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="160" id="b5P-fG-x4p"/>
+                            <constraint firstItem="gPu-tY-S6w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bFt-ul-xfn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5lP-wg-UuV" secondAttribute="trailing" id="hYQ-pa-xSw"/>
+                            <constraint firstItem="tTI-FL-xKS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wHc-6K-yZw"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="delayControl" destination="5lP-wg-UuV" id="WNi-QC-WQN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="302.5" y="250.5"/>
         </scene>
     </scenes>
 </document>

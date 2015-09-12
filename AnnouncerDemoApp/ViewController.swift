@@ -11,8 +11,10 @@ import AccessibilityAnnouncer
 
 class ViewController: UIViewController {
     
-    private let announcer = AccessibilityAnnouncer()
+    private let announcer = AccessibilityAnnouncer(defaultTimeout: 5.0)
 
+    @IBOutlet var delayControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,11 +26,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapShortAnnouncement(sender: UIButton) {
-        announcer.announce("Short.")
+        dispatch_after(delay, dispatch_get_main_queue()) {
+            self.announcer.announce("Short.")
+        }
     }
     
     @IBAction func didTapLongAnnouncement(sender: UIButton) {
-        announcer.announce("This is a long announcement with a lot to say.")
+        dispatch_after(delay, dispatch_get_main_queue()) {
+            self.announcer.announce("This is a long announcement with a lot to say.")
+        }
+    }
+    
+    private var delay: dispatch_time_t {
+        let index = delayControl.selectedSegmentIndex
+        let stringValue = delayControl.titleForSegmentAtIndex(index)!
+        return dispatch_time(DISPATCH_TIME_NOW, Int64(Double(stringValue)! * Double(NSEC_PER_SEC)))
     }
 }
 
