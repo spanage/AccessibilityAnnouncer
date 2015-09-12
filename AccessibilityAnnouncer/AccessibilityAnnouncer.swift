@@ -45,12 +45,10 @@ public class AccessibilityAnnouncer {
        let announceAndCheckNotificationProducer = announcer
             .promoteErrors(NotificationError)
             .concat(notifier)
-            .on(error: { print($0) })
         
         let retryTilTimeoutProducer = announceAndCheckNotificationProducer
             .retry(Int.max)
             .timeoutWithError(.AnnouncementTimedOut, afterInterval: timeout, onScheduler: QueueScheduler())
-            .on(error: { print("Error: \($0)") })
             .flatMapError { _ in AnnouncerProducer.empty }
         
         sendNext(sink, retryTilTimeoutProducer)
@@ -61,7 +59,6 @@ public class AccessibilityAnnouncer {
             UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, announcement)
             sendCompleted(sink)
         }
-            .on(started: { print("Announcing \(announcement)") })
     }
     
     private func createProducerForNotifier(announcement: String) -> NotifierProducer {
