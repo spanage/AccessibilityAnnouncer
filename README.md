@@ -26,7 +26,7 @@ To use the announcer, simply pass it the string you'd like to announce using the
 announcer.announce("Hello!")
  ```
  
-If you would like a given announcement to have a different timeout than your default (for example, you don't want it to be retried if it fails), you can pass an timeout argument.
+If you would like a given announcement to have a different timeout than your default (for example, you don't want it to be retried if it fails), you can pass a timeout argument.
 
 ```swift
 announcer.announce("Hello!", withRetryTimeout: 0.0)
