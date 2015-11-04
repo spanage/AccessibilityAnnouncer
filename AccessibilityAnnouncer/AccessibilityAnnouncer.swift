@@ -9,7 +9,7 @@
 import UIKit
 import ReactiveCocoa
 
-public class AccessibilityAnnouncer {
+public final class AccessibilityAnnouncer {
     
     // Amount of time for which our announcer should retry a failing announcement before
     // giving up. We recommend no more than 3 seconds for this, otherwise the annoucnement
@@ -20,18 +20,18 @@ public class AccessibilityAnnouncer {
     private typealias AnnouncerProducer = SignalProducer<(), NoError>
     private typealias NotifierProducer = SignalProducer<(), NotificationError>
     
-    private let producer: SignalProducer<AnnouncerProducer, NoError>
-    private let sink: SignalProducer<AnnouncerProducer, NoError>.ProducedSignal.Observer
+    private let signal: Signal<AnnouncerProducer, NoError>
+    private let sink: Signal<AnnouncerProducer, NoError>.Observer
     private let disposable: Disposable
     
     public init(defaultTimeout: NSTimeInterval = 3.0) {
         self.defaultRetryTimeout = defaultTimeout
         
-        (producer, sink) = SignalProducer<AnnouncerProducer, NoError>.buffer()
+        (signal, sink) = Signal<AnnouncerProducer, NoError>.pipe()
         
-        disposable = producer
+        disposable = signal
             .flatten(.Concat)
-            .start()
+            .observeNext {}!
     }
     
     deinit {
