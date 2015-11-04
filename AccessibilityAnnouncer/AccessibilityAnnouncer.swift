@@ -21,7 +21,7 @@ public class AccessibilityAnnouncer {
     private typealias NotifierProducer = SignalProducer<(), NotificationError>
     
     private let producer: SignalProducer<AnnouncerProducer, NoError>
-    private let sink: Event<AnnouncerProducer, NoError>.Sink
+    private let sink: SignalProducer<AnnouncerProducer, NoError>.ProducedSignal.Observer
     private let disposable: Disposable
     
     public init(defaultTimeout: NSTimeInterval = 3.0) {
@@ -56,13 +56,13 @@ public class AccessibilityAnnouncer {
             .timeoutWithError(.AnnouncementTimedOut, afterInterval: timeout, onScheduler: QueueScheduler())
             .flatMapError { _ in AnnouncerProducer.empty }
         
-        sendNext(sink, retryTilTimeoutProducer)
+        sink.sendNext(retryTilTimeoutProducer)
     }
     
     private func createProducerForAnnouncer(announcement: String) -> AnnouncerProducer {
         return SignalProducer { sink, disposable in
             UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, announcement)
-            sendCompleted(sink)
+            sink.sendCompleted()
         }
     }
     
@@ -72,7 +72,7 @@ public class AccessibilityAnnouncer {
             .filter { $0[UIAccessibilityAnnouncementKeyStringValue]!.isEqual(announcement) }
             .take(1)
             .promoteErrors(NotificationError)
-            .flatMap(.Merge) { userInfo in
+            .flatMap(.Merge) { userInfo -> NotifierProducer in
                 let success = userInfo[UIAccessibilityAnnouncementKeyWasSuccessful]!.boolValue!
                 
                 if (success) {
