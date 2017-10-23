@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		789798F91F99F27E00B93A41 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789798F81F99F27E00B93A41 /* ReactiveSwift.framework */; };
+		789798FB1F99F29400B93A41 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789798FA1F99F29400B93A41 /* ReactiveSwift.framework */; };
+		789798FC1F99F29400B93A41 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 789798FA1F99F29400B93A41 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		870BEB661BA3BF84004643C9 /* AccessibilityAnnouncer.h in Headers */ = {isa = PBXBuildFile; fileRef = 870BEB651BA3BF84004643C9 /* AccessibilityAnnouncer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		870BEB741BA3C091004643C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BEB731BA3C091004643C9 /* AppDelegate.swift */; };
 		870BEB761BA3C091004643C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BEB751BA3C091004643C9 /* ViewController.swift */; };
@@ -15,11 +18,8 @@
 		870BEB7E1BA3C091004643C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870BEB7C1BA3C091004643C9 /* LaunchScreen.storyboard */; };
 		870BEB831BA3C0B3004643C9 /* AccessibilityAnnouncer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB621BA3BF84004643C9 /* AccessibilityAnnouncer.framework */; };
 		870BEB841BA3C0B3004643C9 /* AccessibilityAnnouncer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB621BA3BF84004643C9 /* AccessibilityAnnouncer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		870BEB891BA3C679004643C9 /* AccessibilityAnnouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BEB881BA3C679004643C9 /* AccessibilityAnnouncer.swift */; settings = {ASSET_TAGS = (); }; };
-		870BEB8C1BA3C802004643C9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8A1BA3C802004643C9 /* ReactiveCocoa.framework */; };
+		870BEB891BA3C679004643C9 /* AccessibilityAnnouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870BEB881BA3C679004643C9 /* AccessibilityAnnouncer.swift */; };
 		870BEB8D1BA3C802004643C9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8B1BA3C802004643C9 /* Result.framework */; };
-		870BEB8F1BA3CCAA004643C9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8A1BA3C802004643C9 /* ReactiveCocoa.framework */; };
-		870BEB901BA3CCAA004643C9 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8A1BA3C802004643C9 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		870BEB911BA3CCAA004643C9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8B1BA3C802004643C9 /* Result.framework */; };
 		870BEB921BA3CCAA004643C9 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 870BEB8B1BA3C802004643C9 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -43,7 +43,7 @@
 			files = (
 				870BEB921BA3CCAA004643C9 /* Result.framework in Embed Frameworks */,
 				870BEB841BA3C0B3004643C9 /* AccessibilityAnnouncer.framework in Embed Frameworks */,
-				870BEB901BA3CCAA004643C9 /* ReactiveCocoa.framework in Embed Frameworks */,
+				789798FC1F99F29400B93A41 /* ReactiveSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		789798F81F99F27E00B93A41 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		789798FA1F99F29400B93A41 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		870BEB621BA3BF84004643C9 /* AccessibilityAnnouncer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccessibilityAnnouncer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		870BEB651BA3BF84004643C9 /* AccessibilityAnnouncer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccessibilityAnnouncer.h; sourceTree = "<group>"; };
 		870BEB671BA3BF84004643C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,8 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				870BEB8C1BA3C802004643C9 /* ReactiveCocoa.framework in Frameworks */,
 				870BEB8D1BA3C802004643C9 /* Result.framework in Frameworks */,
+				789798F91F99F27E00B93A41 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +84,7 @@
 			files = (
 				870BEB911BA3CCAA004643C9 /* Result.framework in Frameworks */,
 				870BEB831BA3C0B3004643C9 /* AccessibilityAnnouncer.framework in Frameworks */,
-				870BEB8F1BA3CCAA004643C9 /* ReactiveCocoa.framework in Frameworks */,
+				789798FB1F99F29400B93A41 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,7 @@
 		870BEB581BA3BF84004643C9 = {
 			isa = PBXGroup;
 			children = (
+				789798FA1F99F29400B93A41 /* ReactiveSwift.framework */,
 				870BEB641BA3BF84004643C9 /* AccessibilityAnnouncer */,
 				870BEB721BA3C091004643C9 /* AnnouncerDemoApp */,
 				870BEB631BA3BF84004643C9 /* Products */,
@@ -134,6 +137,7 @@
 		870BEB8E1BA3C819004643C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				789798F81F99F27E00B93A41 /* ReactiveSwift.framework */,
 				870BEB8A1BA3C802004643C9 /* ReactiveCocoa.framework */,
 				870BEB8B1BA3C802004643C9 /* Result.framework */,
 			);
@@ -203,6 +207,7 @@
 				TargetAttributes = {
 					870BEB611BA3BF84004643C9 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 					};
 					870BEB701BA3C091004643C9 = {
 						CreatedOnToolsVersion = 7.0;
@@ -404,6 +409,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -425,6 +431,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sommerpanage.AccessibilityAnnouncer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -481,6 +488,7 @@
 				870BEB6C1BA3BF84004643C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		870BEB801BA3C091004643C9 /* Build configuration list for PBXNativeTarget "AnnouncerDemoApp" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +497,7 @@
 				870BEB821BA3C091004643C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
