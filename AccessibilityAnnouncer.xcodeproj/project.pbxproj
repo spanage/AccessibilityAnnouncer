@@ -64,7 +64,6 @@
 		870BEB7D1BA3C091004643C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		870BEB7F1BA3C091004643C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		870BEB881BA3C679004643C9 /* AccessibilityAnnouncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityAnnouncer.swift; sourceTree = "<group>"; };
-		870BEB8A1BA3C802004643C9 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		870BEB8B1BA3C802004643C9 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				789798F81F99F27E00B93A41 /* ReactiveSwift.framework */,
-				870BEB8A1BA3C802004643C9 /* ReactiveCocoa.framework */,
 				870BEB8B1BA3C802004643C9 /* Result.framework */,
 			);
 			name = Frameworks;
